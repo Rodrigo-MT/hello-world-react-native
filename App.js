@@ -19,6 +19,11 @@ export default function App() {
     setMessage("");
   };
 
+  const onClearHandler = () => {
+    setMessage("");
+    setName("");
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello World</Text>
@@ -33,6 +38,12 @@ export default function App() {
         onPress={onPressHandler}
         color="green"
         title="Clique aqui para dizer oi"
+      />
+      <Button
+        style={styles.button}
+        onPress={onClearHandler}
+        color="blue"
+        title="Limpar"
       />
       {message && <Text style={styles.title}>{message}</Text>}
       <StatusBar style="auto" />
