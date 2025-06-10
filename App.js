@@ -33,7 +33,8 @@ export default function App() {
         onChangeText={onChangeTextHandler}
         value={name}
       />
-      <Button
+      <View style={styles.box}>
+        <Button
         style={styles.button}
         onPress={onPressHandler}
         color="green"
@@ -45,6 +46,8 @@ export default function App() {
         color="blue"
         title="Limpar"
       />
+      </View>
+        
       {message && <Text style={styles.title}>{message}</Text>}
       <StatusBar style="auto" />
     </View>
@@ -77,5 +80,10 @@ const styles = StyleSheet.create({
   button: {
     padding: 20,
     color: "green",
+  },
+
+  box: {
+    flexDirection: 'row',
+    gap: 16,
   }
 });
